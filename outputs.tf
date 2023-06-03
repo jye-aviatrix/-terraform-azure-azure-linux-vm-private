@@ -21,3 +21,8 @@ output "network_interface_id" {
   description = "Network interface id (for used by add to load balancer backend pool using azurerm_network_interface_backend_address_pool_association)"
   value = azurerm_network_interface.this.id
 }
+
+output "ip_configuration_name" {
+  description = "Network interface ip configuration name (for used by add to load balancer backend pool using azurerm_network_interface_backend_address_pool_association)"
+  value = azurerm_network_interface.this.ip_configuration[0].name
+}
