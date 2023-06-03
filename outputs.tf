@@ -16,3 +16,8 @@ output "instance_id" {
   description = "Instance ID"
   value = azurerm_linux_virtual_machine.this.id
 }
+
+output "network_interface_id" {
+  description = "Network interface id (for used by add to load balancer backend pool using azurerm_network_interface_backend_address_pool_association)"
+  value = azurerm_network_interface.this.id
+}
